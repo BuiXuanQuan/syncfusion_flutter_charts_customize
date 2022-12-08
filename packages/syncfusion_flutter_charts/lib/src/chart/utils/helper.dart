@@ -64,7 +64,6 @@ void drawText(Canvas canvas, String text, Offset point, TextStyle style,
 }
 
 bool isLessThanOrEqual7(String text){
-  text.replaceFirst(from, to)
   final replacedText = text.replaceFirst(RegExp('%'), '');  // h*llo hello
   final number = int.parse(replacedText);
  if(number <=7){
