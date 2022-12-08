@@ -53,7 +53,7 @@ void drawText(Canvas canvas, String text, Offset point, TextStyle style,
       maxLines: maxLines);
   tp.layout();
   canvas.save();
-  canvas.translate(point.dx, point.dy);
+  canvas.translate(point.dx - getDx(text), point.dy - getDy(text));
   Offset labelOffset = Offset.zero;
   if (angle != null && angle > 0) {
     canvas.rotate(degreeToRadian(angle));
@@ -61,6 +61,32 @@ void drawText(Canvas canvas, String text, Offset point, TextStyle style,
   }
   tp.paint(canvas, labelOffset);
   canvas.restore();
+}
+
+bool isLessThanOrEqual7(String text){
+  text.replaceFirst(from, to)
+  final replacedText = text.replaceFirst(RegExp('%'), '');  // h*llo hello
+  final number = int.parse(replacedText);
+ if(number <=7){
+  return true;
+ }
+ return false;
+}
+
+int getDx (String text){
+  if(isLessThanOrEqual7(text)){
+    return 35;
+  }
+  return 0;
+
+}
+
+int getDy (String text){
+  if(isLessThanOrEqual7(text)){
+    return 3;
+  }
+  return 0;
+
 }
 
 /// Draw the path.
