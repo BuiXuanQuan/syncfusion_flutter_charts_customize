@@ -82,7 +82,7 @@ int getDy(String text){
 
 int getDx(String text){
   if(isLessThanOrEqual7(text)){
-    return 3;
+    return 1;
   }
   return 0;
 
