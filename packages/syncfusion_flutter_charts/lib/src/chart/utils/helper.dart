@@ -53,7 +53,7 @@ void drawText(Canvas canvas, String text, Offset point, TextStyle style,
       maxLines: maxLines);
   tp.layout();
   canvas.save();
-  canvas.translate(point.dx - getDx(text), point.dy - getDy(text));
+  canvas.translate(point.dx + getDx(text), point.dy - getDy(text));
   Offset labelOffset = Offset.zero;
   if (angle != null && angle > 0) {
     canvas.rotate(degreeToRadian(angle));
@@ -82,7 +82,7 @@ int getDy(String text){
 
 int getDx(String text){
   if(isLessThanOrEqual7(text)){
-    return 1;
+    return 3;
   }
   return 0;
 
