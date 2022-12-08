@@ -72,7 +72,7 @@ bool isLessThanOrEqual7(String text){
  return false;
 }
 
-int getDx (String text){
+int getDy(String text){
   if(isLessThanOrEqual7(text)){
     return 35;
   }
@@ -80,7 +80,7 @@ int getDx (String text){
 
 }
 
-int getDy (String text){
+int getDx(String text){
   if(isLessThanOrEqual7(text)){
     return 3;
   }
